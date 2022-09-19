@@ -1,0 +1,129 @@
+@import url(../css/fonts.css);
+@import url(../css/partials/_global.css);
+@import url(../css/partials/_variables.css);
+/* ######################################################## */
+
+/* Start Navigation */
+
+.navbar {
+    background-color: #fff;
+    border-bottom: 1px solid #ecebeb;
+}
+
+.nav-shadow {
+    box-shadow: 0 .5rem 1rem rgba(208, 204, 204, 0.15) !important;
+}
+
+/* End Navigation */
+
+/* Start Main Area */
+
+.map-shadow {
+    box-shadow: 0 .5rem 1rem #75CFF0 !important;
+}
+
+#map {
+    width: 100%;
+    height: 500px;
+}
+
+/* End Main Area */
+
+/* Start Secondary Main */
+
+.purple-shadow {
+    box-shadow: 0 .5rem 1rem #E0E4FF !important;
+}
+
+.red-shadow {
+    box-shadow: 0 .5rem 1rem #FBE0DE!important;
+}
+
+.green-shadow {
+    box-shadow: 0 .5rem 1rem #D6F7EA !important;
+}
+
+.secondary-main-heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #364a63;
+    font-family: var(--roboto-bold);
+}
+
+.secondary-main-card-title {
+    font-size: 0.875rem;
+    color: #364a63;
+    font-family: var(--roboto-bold);
+    font-weight: 700;
+}
+
+.secondary-main-card-title-amt {
+    font-size: 2rem;
+    font-weight: 700;
+    font-family: var(--roboto-bold);
+}
+
+.secondary-main-padding {
+    padding-left: 18px;
+    padding-top: 27px;
+}
+
+.secondary-main-padding-amt {
+    padding-left: 17px;
+    padding-top: 4px;
+}
+
+.flags {
+    height: 16px;
+}
+
+.table-heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: #364a63;
+    font-family: var(--roboto-bold);
+}
+
+.table-start {
+    height: 500px;
+    overflow: auto;
+    border-top: 1px solid #dee2e6;
+    box-shadow: 0 .5rem 1rem #D6F7EA !important;
+}
+
+th {
+    font-size: 14px;
+    color: #5e7ea9;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: var(--roboto-bold);
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: rgb(236, 236, 236);
+}
+
+td p {
+    color: #364a63;
+    font-family: var(--roboto-medium);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+/* End Secondary Main */
+
+/* Start Footer */
+
+.footer-border-top {
+    border-top: 1px solid #e2dddd;
+}
+
+.footer-text-style {
+    color: #5e7ea9;
+    font-family: var(--roboto-bold);
+    font-size: .875rem;
+    font-weight: 400;
+}
+
+/* End Footer */

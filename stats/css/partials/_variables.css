@@ -1,0 +1,17 @@
+html, body {
+    margin: 0%;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+}
+
+/* CSS Variables */
+
+:root {
+    --active-link-color: #1672e9;
+    /* font family variables. */
+    --roboto: 'Roboto', cursive, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --roboto-black: 'RobotoBlack', cursive, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --roboto-medium: 'RobotoMedium', cursive, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+    --roboto-bold: 'RobotoBold', cursive, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+}

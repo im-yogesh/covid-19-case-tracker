@@ -1,0 +1,101 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+}
+
+.main-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/shape-a.png');
+    background-color: #F7F9FE;
+}
+
+.form-container {
+    border: 0.5px solid #d4cdcd;
+    padding: 10px;
+    border-radius: 15px;
+    min-width: 30%;
+    max-width: 100%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* box-shadow: 5px 5px 2px #007bff; */
+    box-shadow: 0 4px 8px 0 #4982bf;
+    margin: 30px;
+}
+
+#start {
+    cursor: pointer;
+    border: none;
+    background: #007bff;
+    border-radius: 20px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 14px;
+    outline: none;
+}
+
+#start:hover {
+    background: #2674c7;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    height: 40%;
+}
+
+.title-container {
+    padding: 10px 20px;
+}
+
+.startBtn-container {
+    padding: 10px 20px;
+}
+
+.nxtBtn-container {
+    position: relative;
+    left: 34%;
+    top: 14%;
+}
+
+.next {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background: #007bff;
+    color: #fff;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100px;
+}
+
+.next:hover {
+    background: #0c60b9;
+}
+
+.next:disabled {
+    /* border: 1px solid #999999; */
+    background-color: #e6e8f5;
+    color: #666666;
+}
+
+@media only screen and (max-width: 800px) {
+    .title-container {
+        padding: 10px 3px;
+    }
+}

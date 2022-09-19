@@ -1,0 +1,32 @@
+@import url(../partials/_variables.css);
+.bg-purple {
+    background-color: #816bff !important;
+}
+
+.bg-success {
+    background-color: #1ee0ac !important;
+}
+
+.bg-danger {
+    background-color: #e85347 !important;
+}
+
+.text-danger {
+    color: #e85347 !important;
+}
+
+.text-success {
+    color: #1ee0ac !important;
+}
+
+.text-purple {
+    color: #816bff !important;
+}
+
+.text-blue {
+    color: #0971fe !important;
+}
+
+.text-green {
+    color: #2dc39b;
+}

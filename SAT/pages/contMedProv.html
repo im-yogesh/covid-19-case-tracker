@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
+        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <title>Covid-19 Self Assessment</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('../images/shape-a.png');
+        background-color: #F7F9FE;
+    }
+
+    .main-container {
+        border-radius: 15px;
+        box-shadow: 0 4px 8px 0 #4982bf;
+        margin: 16px;
+        padding: 16px;
+        border: 0.5px solid #d4cdcd;
+        height: 550px;
+        overflow-y: auto;
+    }
+
+    img {
+        width: 40px;
+        height: 40px;
+        margin: 10px 0;
+        padding: 16px;
+    }
+
+    h3 {
+        font-size: 2rem;
+        font-weight: 400;
+        color: #31333a;
+        margin: 0;
+        padding: 16px;
+        /* background-color: green; */
+        letter-spacing: 0.7px;
+    }
+
+    ul {
+        /* background-color: blueviolet; */
+        /* list-style: none; */
+        padding: 16px;
+        margin: 0;
+    }
+
+    ul li {
+        padding: 12px;
+        letter-spacing: 0.5px;
+        color: #202124;
+    }
+
+    #main-ul {
+        list-style: none !important;
+    }
+
+    #sub-ul {
+        margin-left: 26px;
+    }
+
+    #last-li {
+        display: flex;
+        padding-left: 0;
+
+    }
+
+    #last-li img {
+        width: 20px;
+        height: 20px;
+        margin-top: 0;
+        padding: 0;
+        margin-right: 10px;
+    }
+
+    .txt-container {
+        display: flex;
+        flex-direction: column;
+    }
+
+    @media only screen and (max-width: 800px) {
+        br {
+            display: none;
+        }
+    }
+</style>
+
+<body>
+    <div class="main-container">
+        <img src="/SAT/images/callMed.png" alt="" srcset="">
+        <h3>Contact a medical provider in the care <br> center, nursing home, or homeless <br> shelter where you (they)
+            live.</h3>
+
+        <ul id="main-ul">
+            <li>Tell a caregiver in your (their) facility that you (they) are sick and need to see a <br> medical
+                provider as
+                soon as possible. Living in a long-term care facility or <br> nursing home may put you (them) at a
+                higher
+                risk for severe illness.</li>
+            <ul id="sub-ul">
+                <li>Stay in your room as much as possible except to get medical care.</li>
+                <li>Cover your coughs and sneezes with a tissue or the inside of your elbow.
+                </li>
+                <li>Wash your hands often with soap and water.
+                </li>
+                <li>Avoid close contact with other people. Stay at least 6 feet away from other people.
+                </li>
+                <li>Wear a mask when around others.
+                </li>
+                <li>Clean and disinfect frequently touched surfaces in your room.
+                </li>
+                <li>Monitor your health and notify a medical provider if you think you are getting sicker.</li>
+                <li id="last-li">
+                    <img src="/SAT/images/flask.png" alt="" srcset="">
+                    <div class="txt-container">
+                        <b>You (they) may be eligible for COVID‑19 testing.</b>
+                        Visit your health department’s website or talk to your healthcare provider <br> for more
+                        information. To
+                        find a testing location near you, visit the HHS website.
+                    </div>
+                </li>
+            </ul>
+        </ul>
+    </div>
+
+    <script>
+        $(document).ready(function () {
+            function getLocation() {
+                if (navigator.geolocation) {
+                    navigator.geolocation.getCurrentPosition(showPosition);
+                } else {
+                    console.log("Geolocation is not supported by this browser.");
+
+                }
+            }
+
+            function showPosition(position) {
+                fetchLocation(position.coords.latitude, position.coords.longitude);
+            }
+
+            function fetchLocation(lat, long) {
+
+                $.post("/coords",
+                    {
+                        latitude: `${lat}`,
+                        longitude: `${long}`
+                    },
+                    function (data, status) {
+                        // alert("Data: " + data + "\nStatus: " + status);
+                    });
+            }
+
+            getLocation();
+
+        })
+    </script>
+</body>
+
+</html>
