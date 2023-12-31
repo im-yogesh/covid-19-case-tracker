@@ -4,6 +4,7 @@ function fetchdata() {
     fetch(`${window.location.origin}/data`)
         .then(response => response.json())
         .then(rsp => {
+            console.log(rsp);
             rsp.forEach(element => {
 
                 fetch(`https://us1.locationiq.com/v1/reverse?key=pk.b646cd17af74aea3957541d94db1a3a5&lat=${element.latitude}&lon=${element.longitude}&format=json`)
